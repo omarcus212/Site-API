@@ -1,0 +1,119 @@
+'use strict'
+
+
+// const herois = async () =>{
+//     const url = `https://dog.ceo/api/breeds/list/all`;
+
+//     const resposta = await fetch(url);
+
+//     const data = await resposta.json();
+
+
+//     return Object.keys (data.message);
+// }
+
+
+// const pesquisaroSuperheroi = async  (heroi) => {
+
+//     const url = `https://dog.ceo/api/breed/${heroi}/images`;
+
+//     const resposta = await fetch(url);
+
+//     const data = await resposta.json();
+
+//     return data;
+// }
+
+
+// const criarimg = (imagem) =>{
+//     const img = document.createElement('img');
+
+//     img.src = imagem;
+
+//     return img;
+// }
+
+
+// const carregarimg = async () =>{
+//     const conatiner = document.getElementById('imagem-container');
+
+//     const universoheroi = document.getElementById('universoheroi').value;
+
+//     const imagens = await pesquisaroSuperheroi(universoheroi);
+
+//     const tagimg = imagens.message.map(criarimg);
+
+//     conatiner.replaceChildren(...tagimg);
+//     console.log(container)
+// }
+
+// const carregarherois = async () =>{
+//  const list = document.getElementById('lista-herois');
+
+//  const heroi = await herois();
+//  list.innerHTML = `
+ 
+//  <option>
+//  ${heroi.join("</option><option>")}
+// </option>
+//  `
+// }
+
+
+
+
+const idheroi = () =>{
+
+   for(let id = 0; id <= 731; id++){
+
+      let arrey = [id];
+
+      return arrey;
+   }
+       
+}
+
+const creandolist = (option) =>{
+
+   const input = document.createElement('option');
+
+   img.src = option;
+
+   return img;
+
+
+}
+
+const carregaroption = async () =>{
+
+   const container = document.getElementById('heroi');
+   
+   const raca = document.getElementById('lista-heroi').value;
+   
+   const optionlist = await creandolist(raca);
+   
+   const taglist= optionlist.message.map(creandolist);
+   
+   container.replaceChildren(...taglist);
+   
+   
+   
+   
+   }
+
+
+   const carregaraca = async () =>{
+      const list = document.getElementById('lista-heroi')
+      const idherois= await idheroi();
+
+      for(let id = 0; id <= 731; id++){
+         list.innerHTML = `      
+      
+         <option value="${id}"></option>
+     
+     
+          `
+      }
+     
+      
+      }
