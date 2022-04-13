@@ -10,6 +10,9 @@ main {
     padding-left: 60px;
     padding-right: 60px;
     background-color: #121f29;
+    justify-content: center;
+    align-items: center;
+    height: auto;
 }
 
 
@@ -83,20 +86,50 @@ background-color: black;
 
 }
 
-#imagem-container img{
-    width: 250px;
-    height: 250px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-}
 
 #imagem-container{
-    background-color: #000a41;
-    padding-left: 100px;
+    display: flex;
+   height: auto;
+    justify-content: center;
+    width: 100%;
+    min-height: 35rem;
+  
+    
+
    
 }
 
-#imagem-container img:hover{
-    transform: scale(103%);
+.cardheroi{
+    float: left;
+    width: 100%;
+    min-height: 10px;
+    background-color: #ee162f;
+    color: #fff;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    height: inherit;
+    overflow: hidden;
+   
+    
+}
+.cardheroi h3{
+    font-size: 2rem;
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.cardheroi img{
+    width: 50%;
+    height: 50%;
+    margin-left: 10px;
+    
+}
+.cardheroi img:hover{
+    transform: scale(102%);
     transition: 1s;
 }
+

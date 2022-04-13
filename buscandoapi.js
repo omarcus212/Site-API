@@ -1,6 +1,6 @@
-'use strich'
+ 'use strich'
 
-const nomeheroi = document.getElementById('heroi');
+
 
 
 async function pesquisandoHeroi(nomeheroi){
@@ -11,78 +11,61 @@ const reponse = await fetch(url);
 
 const data = await reponse.json();
 
-
-
 return data;
 
 }
 
-async function heroi(){
-const nomeheroi = document.getElementById('heroi').value;
 
 
-const reposta = await pesquisandoHeroi(nomeheroi);
+function criarimg({image, biography}){
 
-const tagimg = reposta.results;
+    const card = document.createElement("div");
 
-const img = tagimg[1].image;
-
-const bioheroi = tagimg[1].biography;
-
-const nmheroi = tagimg[1].name;
-
-console.log(nmheroi);
-console.log(bioheroi);
-console.log(img);
-
-// const urlimagem = await criarimg(urlimagem);
-
-// const enviarimg = criarimg(img);
+       card.classList.add('cardheroi');
+    
+       card.innerHTML = `
+    
+       <div class="cardheroi">
+       
+           <h3>${biography["full-name"]}</h3>
+           <img src="${image.url}" class="front"></img>
+           `
 
 
-}
+           return card;
+};
 
 
+async function imgheroi(){
 
-// const criarimg = (imagem) =>{
+    const nomeheroi = document.getElementById('heroi').value;
+    const container = document.getElementById("imagem-container");
 
-//     const img = document.createElement('img');
+    const reposta = await pesquisandoHeroi(nomeheroi);
+  
+    const tagimg = reposta.results.map(criarimg);
+    
+   console.log(tagimg);
+  
+   container.replaceChildren(...tagimg);
 
-//     img.src = imagem;
-
-//     return img;
-
-
-
-// }
-
-
-// function carregarimg (){
-
-// const img = criarimg();
-
-// const url = document.getElementById('imagem-container');
-
-// url.innerHTML = `
-// <div id="imagem-container">
-//             <img src="${img}" alt="">
-//         </div>
-
-// `
-
-
-// }
-
-
-// carregarimg();
-document.getElementById('pesquisar').addEventListener('click', heroi);
+};
 
 
 
 
 
+document.getElementById('pesquisar').addEventListener('click', imgheroi);
 
-
+document.addEventListener("keypress", function(imgheroi) {
+    if(imgheroi.key === 'Enter') {
+    
+        var btn = document.querySelector("#pesquisar");
+      
+      btn.click();
+    
+    }
+  });
 
 
 
