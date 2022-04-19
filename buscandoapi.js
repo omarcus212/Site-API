@@ -20,7 +20,7 @@ return data;
 function criarimg({image, biography, powerstats,name}){
 
     const card = document.createElement("div");
-    console.log(powerstats)
+  
 
        card.classList.add('.card');
     
@@ -34,8 +34,8 @@ function criarimg({image, biography, powerstats,name}){
             </div>
             <div class="contet">
                 <h2>${biography['full-name']}</h2>
-                
-                <p>first-apparence: ${biography['full-name']}</p>
+                <p>Details..</p>
+                <p>first-apparence: ${biography['first-appearance']}</p>
                 <p> intelligence : ${powerstats.intelligence}</p>
                 <p> combat : ${powerstats['combat']}</p>
                 <p> power : ${powerstats['power']}</p>
@@ -59,10 +59,6 @@ async function imgheroi(){
   
     const tagimg = reposta.results.map(criarimg);
 
-    const bla = reposta.results;
-    
-   console.log(bla);
-  
    container.replaceChildren(...tagimg);
 
 };
