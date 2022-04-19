@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: #121f29;
+}
+
 header,
 main {
 
@@ -16,7 +20,18 @@ main {
 }
 
 
-
+.ospersonagen{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #0f0f0f;
+    margin: auto;
+}
 
 /* no Header */
 
@@ -83,53 +98,120 @@ background-color: black;
     height: 20%;
     border-radius: 3rem;
     padding-left: 20px;
+    margin-bottom: 10px;
 
 }
 
-
-#imagem-container{
+.maisps{
+    
+    padding-left: 10px;
+    width: 100%;
+    height: 30px;
     display: flex;
-   height: auto;
-    justify-content: center;
-    width: 100%;
-    min-height: 35rem;
-  
-    
-
-   
-}
-
-.cardheroi{
-    float: left;
-    width: 100%;
-    min-height: 10px;
-    background-color: #ee162f;
     color: #fff;
-    padding-top: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 30px;
-    height: inherit;
-    overflow: hidden;
-   
-    
-}
-.cardheroi h3{
-    font-size: 2rem;
-    text-decoration: underline;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-bottom: 20px;
-    z-index: 1;
+    font-size: 20px;
 }
 
-.cardheroi img{
-    width: 50%;
-    height: 50%;
-    margin-left: 10px;
+.maisps p{
+    margin-right: 10px;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 10px ;
+    color: #ffff;
+
+}
+
+.container .card{
+    position: relative;
+    max-width: 300px;
+    height: 400px;
+    background-color: #ee162f;
+    margin: 50px 10px;
+    margin-bottom: 60px;
+    padding:  20px 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 202px #011101;
+    transition: 0.3s ease-in-out;
+}
+
+.container .card:hover{  
+    height: 600px;
+    transition: 0.30s;
+}
+
+.container .card .imgbx{
+   position: relative;
+   width: 260px;
+   height: 260px;
+   margin-bottom: 15px;
+   z-index: 1;
+
+}
+
+.container .card .imgbx img{
+    max-width: 100%;
+    height: 90%;
+    border-radius: 4px;
+    
     
 }
-.cardheroi img:hover{
-    transform: scale(102%);
-    transition: 1s;
+
+.container .card .contet{
+    position: relative;
+    margin-top: -140px;
+    text-align: center;
+    color: rgba(17, 17, 17, 0.842);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
 }
 
+.container .card:hover .contet{
+    visibility: visible;
+    opacity: 1;
+    margin-top: 30px;
+    transition-delay: 0.3s;
+}
+
+.container .card p{
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.container .card h1,h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffff;
+}
+
+.container .card h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contet h2{
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.897);
+}
+
+.contet p{
+    font-size: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #ffff;
+
+}
